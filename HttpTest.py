@@ -4,13 +4,10 @@ import requests
 def callAUrl(url):
     try:
         response = requests.get(url)
-        print response
+        print response.text
     except Exception as e:
         raise e
 
 
-def __main__():
-    callAUrl("http://google.co.in")
 
-
-__main__()
+callAUrl("http://google.co.in")
